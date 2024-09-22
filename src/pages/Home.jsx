@@ -31,6 +31,7 @@ const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
+    setGlobalStep(3);
   };
 
   const handleChildData = (data) => {
@@ -53,10 +54,24 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.log("all answer", allAnswers);
+    console.log("all answers", allAnswers);
     const isIdExists = checkIfIdExists(curQuestionId);
     if (isIdExists) {
-      console.log("is id exist", isIdExists);
+      const possibleAnswers = [
+        "Mobile Home",
+        "Yes",
+        "Less than 2 years",
+        "Excellent Condition (Recently Renovated or new construction within the last 2 years)",
+        "Above Market Value (best for listing with a realtor)",
+        "No, I want market value",
+      ];
+      const isMatch = allAnswers.some((item) =>
+        possibleAnswers.includes(item.selectedAns)
+      );
+      if (isMatch) {
+        setGlobalStep(2);
+      }
+
       setCurQuestionId((prev) => prev + 1);
     }
     if (allAnswers.length === 12) {
@@ -162,6 +177,18 @@ const Home = () => {
                 <GrLinkNext />
               </button>
             </form>
+          </div>
+        )}
+        {globalStep === 3 && (
+          <div className="flex flex-col w-full justify-center items-center p-4 bg-black/60">
+            <h1 className="font-bold text-lg text-white text-center">
+              Thank You for Completing Our Survey!
+            </h1>
+            <p className="text-white text-center w-full md:w-1/2 my-4">
+              Thank you for taking the time to complete our survey. We truly
+              value your feedback and insights, as they help us improve our
+              services and better meet your expectations.
+            </p>
           </div>
         )}
       </div>
