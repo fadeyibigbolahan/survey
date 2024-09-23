@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { GrLinkNext } from "react-icons/gr";
-import bgg from "../images/bgg.jpg";
 import Header from "../components/Header";
 import Question from "../components/Question";
 import { questionList } from "../data/QuestionList";
@@ -88,16 +87,8 @@ const Home = () => {
   }, [curQuestionId, curQuestion]);
 
   return (
-    <div
-      style={{
-        backgroundImage: `url(${bgg})`,
-        height: "100vh",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed", // Fixes the background
-      }}
-    >
-      <div className="flex flex-col items-center bg-[#00000090] h-[100vh] w-[100%] absolute">
+    <div className="w-full h-full">
+      <div className="flex flex-col items-center bg-[#00000090] h-[150vh] w-[100%] absolute">
         <Header />
         {globalStep === 1 && (
           <div className="flex flex-col w-full justify-center items-center">
