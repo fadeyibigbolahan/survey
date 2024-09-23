@@ -8,18 +8,7 @@ import bgg from "./images/bgg.jpg";
 
 function App() {
   return (
-    <div
-      style={{
-        // backgroundImage: `url(${bgg})`,
-        // height: "150vh",
-        backgroundSize: "cover",
-        backgroundRepeat: "repeat",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed", // Fixes the background
-        overflow: "hidden",
-      }}
-      className="bg-gradient-to-r from-blue-500 to-green-500 h-screen"
-    >
+    <div class="min-h-screen bg-gradient-to-b from-blue-500 to-white">
       <Home />
     </div>
   );
