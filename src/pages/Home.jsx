@@ -99,9 +99,8 @@ const Home = () => {
           )}
           {curQuestionId <= 12 && (
             <div
-              // onClick={() => setCurQuestionId((prev) => prev + 1)}
               onClick={() => nextFunc()}
-              className="flex flex-row justify-center items-center p-3 mb-5 md:w-2/5 w-4/5 rounded-md my-4 bg-blue-800 hover:bg-blue-500 cursor-pointer"
+              className="flex flex-row justify-center items-center p-3 mb-5 md:w-2/5 w-4/5 rounded-md bg-blue-800 hover:bg-blue-500 cursor-pointer"
             >
               <p className="font-bold text-[18px] mr-2">NEXT</p>
               <GrLinkNext />
