@@ -37,7 +37,7 @@ export const questionList = [
     opt1: "Needs major repairs",
     opt2: "Needs minor repairs",
     opt3: "No repairs needed",
-    opt4: "Excellent Condition (Recently Renovated or new construction within the last 2 years)",
+    opt4: "Excellent Condition",
   },
   {
     id: 6,

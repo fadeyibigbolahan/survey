@@ -61,7 +61,7 @@ const Home = () => {
         "Mobile Home",
         "Yes",
         "Less than 2 years",
-        "Excellent Condition (Recently Renovated or new construction within the last 2 years)",
+        "Excellent Condition",
         "Above Market Value (best for listing with a realtor)",
         "No, I want market value",
       ];
@@ -97,7 +97,7 @@ const Home = () => {
         backgroundAttachment: "fixed", // Fixes the background
       }}
     >
-      <div className="flex flex-col items-center bg-[#00000090] h-[100vh] w-[100%] absolute pb-5">
+      <div className="flex flex-col items-center bg-[#00000090] h-[100vh] w-[100%] absolute">
         <Header />
         {globalStep === 1 && (
           <div className="flex flex-col w-full justify-center items-center">
