@@ -31,10 +31,10 @@ const Question = ({ activeQ, sendDataToParent }) => {
               onClick={() => sendData(activeQ?.opt1)}
               className="flex flex-row justify-start cursor-pointer items-center p-3 mt-4 w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
             >
-              <div className="flex justify-center items-center border-2 border-white rounded-full w-[30px] h-[30px]">
-                <p className="text-white">a</p>
+              <div className="flex justify-center items-center md:border-2 border border-white rounded-full w-[20px] h-[20px] md:w-[30px] md:h-[30px]">
+                <p className="text-white text-sm">a</p>
               </div>
-              <p className="text-white ml-4 w-4/5">{activeQ?.opt1}</p>
+              <p className="text-white ml-2 w-4/5">{activeQ?.opt1}</p>
             </div>
           )}
           {activeQ?.opt2 && (
@@ -42,10 +42,10 @@ const Question = ({ activeQ, sendDataToParent }) => {
               onClick={() => sendData(activeQ?.opt2)}
               className="flex flex-row justify-start cursor-pointer items-center p-3 mt-4 w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
             >
-              <div className="flex justify-center items-center border-2 border-white rounded-full w-[30px] h-[30px]">
-                <p className="text-white">b</p>
+              <div className="flex justify-center items-center md:border-2 border border-white rounded-full w-[20px] h-[20px] md:w-[30px] md:h-[30px]">
+                <p className="text-white text-sm">b</p>
               </div>
-              <p className="text-white ml-4 w-4/5">{activeQ?.opt2}</p>
+              <p className="text-white ml-2 w-4/5">{activeQ?.opt2}</p>
             </div>
           )}
         </div>
@@ -55,10 +55,10 @@ const Question = ({ activeQ, sendDataToParent }) => {
               onClick={() => sendData(activeQ?.opt3)}
               className="flex flex-row justify-start items-center cursor-pointer p-3 mt-4 w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
             >
-              <div className="flex justify-center items-center border-2 border-white rounded-full w-[30px] h-[30px]">
-                <p className="text-white">c</p>
+              <div className="flex justify-center items-center md:border-2 border border-white rounded-full w-[20px] h-[20px] md:w-[30px] md:h-[30px]">
+                <p className="text-white text-sm">c</p>
               </div>
-              <p className="text-white ml-4 w-4/5">{activeQ?.opt3}</p>
+              <p className="text-white ml-2 w-4/5">{activeQ?.opt3}</p>
             </div>
           )}
           {activeQ?.opt4 && (
@@ -66,10 +66,10 @@ const Question = ({ activeQ, sendDataToParent }) => {
               onClick={() => sendData(activeQ?.opt4)}
               className="flex flex-row justify-start items-center cursor-pointer p-3 mt-4 w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
             >
-              <div className="flex justify-center items-center border-2 border-white rounded-full w-[30px] h-[30px]">
-                <p className="text-white">d</p>
+              <div className="flex justify-center items-center md:border-2 border border-white rounded-full w-[20px] h-[20px] md:w-[30px] md:h-[30px]">
+                <p className="text-white text-sm">d</p>
               </div>
-              <p className="text-white ml-4 w-4/5">{activeQ?.opt4}</p>
+              <p className="text-white ml-2 w-4/5">{activeQ?.opt4}</p>
             </div>
           )}
         </div>

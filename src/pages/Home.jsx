@@ -88,7 +88,7 @@ const Home = () => {
 
   return (
     <div className="w-full h-full">
-      <div className="flex flex-col items-center bg-[#00000090] h-[150vh] w-[100%] absolute">
+      <div className="flex flex-col items-center h-[100vh] w-[100%] absolute">
         <Header />
         {globalStep === 1 && (
           <div className="flex flex-col w-full justify-center items-center">

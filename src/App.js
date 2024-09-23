@@ -10,14 +10,15 @@ function App() {
   return (
     <div
       style={{
-        backgroundImage: `url(${bgg})`,
-        height: "150vh",
+        // backgroundImage: `url(${bgg})`,
+        // height: "150vh",
         backgroundSize: "cover",
         backgroundRepeat: "repeat",
         backgroundPosition: "center",
         backgroundAttachment: "fixed", // Fixes the background
+        overflow: "hidden",
       }}
-      className="w-full h-full"
+      className="bg-gradient-to-r from-blue-500 to-green-500 h-screen"
     >
       <Home />
     </div>
