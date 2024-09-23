@@ -29,7 +29,7 @@ const Question = ({ activeQ, sendDataToParent }) => {
           {activeQ?.opt1 && (
             <div
               onClick={() => sendData(activeQ?.opt1)}
-              className="flex flex-row justify-start cursor-pointer items-center p-3 mt-4 w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
+              className="flex flex-row justify-start cursor-pointer items-center p-3 mt-4 w-full md:w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
             >
               <div className="flex justify-center items-center md:border-2 border border-white rounded-full w-[20px] h-[20px] md:w-[30px] md:h-[30px]">
                 <p className="text-white text-sm">a</p>
@@ -40,7 +40,7 @@ const Question = ({ activeQ, sendDataToParent }) => {
           {activeQ?.opt2 && (
             <div
               onClick={() => sendData(activeQ?.opt2)}
-              className="flex flex-row justify-start cursor-pointer items-center p-3 mt-4 w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
+              className="flex flex-row justify-start cursor-pointer items-center p-3 mt-4 w-full md:w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
             >
               <div className="flex justify-center items-center md:border-2 border border-white rounded-full w-[20px] h-[20px] md:w-[30px] md:h-[30px]">
                 <p className="text-white text-sm">b</p>
@@ -53,7 +53,7 @@ const Question = ({ activeQ, sendDataToParent }) => {
           {activeQ?.opt3 && (
             <div
               onClick={() => sendData(activeQ?.opt3)}
-              className="flex flex-row justify-start items-center cursor-pointer p-3 mt-4 w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
+              className="flex flex-row justify-start items-center cursor-pointer p-3 mt-4 w-full md:w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
             >
               <div className="flex justify-center items-center md:border-2 border border-white rounded-full w-[20px] h-[20px] md:w-[30px] md:h-[30px]">
                 <p className="text-white text-sm">c</p>
@@ -64,7 +64,7 @@ const Question = ({ activeQ, sendDataToParent }) => {
           {activeQ?.opt4 && (
             <div
               onClick={() => sendData(activeQ?.opt4)}
-              className="flex flex-row justify-start items-center cursor-pointer p-3 mt-4 w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
+              className="flex flex-row justify-start items-center cursor-pointer p-3 mt-4 w-full md:w-[48%] bg-black/60 hover:bg-black/80 rounded-md border-l-[5px] border-l-blue-400"
             >
               <div className="flex justify-center items-center md:border-2 border border-white rounded-full w-[20px] h-[20px] md:w-[30px] md:h-[30px]">
                 <p className="text-white text-sm">d</p>
