@@ -14,7 +14,7 @@ const libraries = ["places"];
 const Home = () => {
   const inputref = useRef(null);
   const [curQuestionId, setCurQuestionId] = useState(1);
-  const [globalStep, setGlobalStep] = useState(2);
+  const [globalStep, setGlobalStep] = useState(1);
   const [curQuestion, setCurQuestion] = useState();
   const [allAnswers, setAllAnswers] = useState([]);
   const [showWarning, setShowWarning] = useState();
@@ -23,6 +23,7 @@ const Home = () => {
     lastName: "",
     email: "",
     phone: "",
+    country: "",
     address: "",
   });
 
@@ -180,6 +181,17 @@ const Home = () => {
                   required
                 />
               </div>
+            </div>
+            <div className="flex flex-col w-full">
+              <label className="mb-2 text-white">Country:</label>
+              <input
+                className="flex flex-row justify-start items-center p-2 text-white w-full bg-black/60 rounded-md"
+                type="text"
+                name="country"
+                value={formData.country}
+                onChange={handleChange}
+                required
+              />
             </div>
             {isLoaded && (
               <div className="flex flex-col w-full">
