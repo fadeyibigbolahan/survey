@@ -1,12 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { GrLinkNext } from "react-icons/gr";
 import Header from "../components/Header";
 import Question from "../components/Question";
 import { questionList } from "../data/QuestionList";
+import {
+  GoogleMap,
+  useJsApiLoader,
+  StandaloneSearchBox,
+} from "@react-google-maps/api";
+
+const libraries = ["places"];
 
 const Home = () => {
+  const inputref = useRef(null);
   const [curQuestionId, setCurQuestionId] = useState(1);
-  const [globalStep, setGlobalStep] = useState(1);
+  const [globalStep, setGlobalStep] = useState(2);
   const [curQuestion, setCurQuestion] = useState();
   const [allAnswers, setAllAnswers] = useState([]);
   const [showWarning, setShowWarning] = useState();
@@ -15,7 +23,21 @@ const Home = () => {
     lastName: "",
     email: "",
     phone: "",
+    address: "",
   });
+
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: "AIzaSyDmQgHCWYNTGtGKq-vgxmMfiP5sKMocCUs",
+    libraries: ["places"],
+  });
+
+  console.log("is map loading", isLoaded);
+
+  const handleOnPlacesChanged = () => {
+    let address = inputref.current.getPlaces();
+    console.log("address", address);
+  };
 
   // Function to handle input change
   const handleChange = (e) => {
@@ -159,6 +181,24 @@ const Home = () => {
                 />
               </div>
             </div>
+            {isLoaded && (
+              <div className="flex flex-col w-full">
+                <label className="mb-2 text-white">Address:</label>
+                <StandaloneSearchBox
+                  onLoad={(ref) => (inputref.current = ref)}
+                  onPlacesChanged={handleOnPlacesChanged}
+                >
+                  <input
+                    className="flex flex-row justify-start items-center p-2 text-white w-full bg-black/60 rounded-md"
+                    type="text"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleChange}
+                    required
+                  />
+                </StandaloneSearchBox>
+              </div>
+            )}
             <button
               type="submit"
               className="flex flex-row justify-center items-center self-center p-3 mb-5 w-full rounded-md my-4 bg-blue-800 hover:bg-blue-500 cursor-pointer"
